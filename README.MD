@@ -1,6 +1,7 @@
 ## 使用说明
 
-已删除Function类下的Cmd方法，需要使用者自己添加
+
+### Windows:
 
 ```
 C2> 
@@ -30,6 +31,34 @@ d2cfbad734a347a2932bdf061ba44ae1> sleep 0
 [+] Shell Command Results:
 sleep:0
 
+```
+
+### Linux:
+
+```
+kHKofWxMkmTFLiku> shell ping -c 5 8.8.8.8
+kHKofWxMkmTFLiku>
+[+] Shell Command Results:
+
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: icmp_seq=0 ttl=112 time=55.691 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=112 time=50.363 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=112 time=55.485 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=112 time=55.257 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=112 time=54.776 ms
+
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 50.363/54.314/55.691/1.999 ms
+
+```
+
+更新记录
+
+```
+2021/11/6
+[!]修改C#通讯逻辑
+[+]新增GoClient(Linux)
 ```
 
 ## 通讯过程

