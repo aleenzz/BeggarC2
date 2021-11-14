@@ -1,5 +1,13 @@
 ## 使用说明
 
+### 测试环境：
+
+```
+Server: Python 3.8.2
+C#Client: .net2/.net3/windows10/windows8
+GoClient:kali/CentOS7
+
+```
 
 ### Windows:
 
